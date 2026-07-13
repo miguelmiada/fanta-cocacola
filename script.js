@@ -99,84 +99,67 @@ var tl2 = gsap.timeline({
     }
 });
 
-tl2.from (
+tl2.from(
     ".lemon1",
     {
-        rotate: "-90deg", // inicia o elemento com classe lemon1 rotacionanndo
-        left: "-100%", // move o elemento fora da tela (-110%) á esquerda
-        top: "110%",
-        rotate: "830deg" // Inicia o elemento ligeiramente abaixo da tela (110%)
-
+        rotate: "830deg",
+        xPercent: -100, // era left: "-100%"
+        yPercent: 110,  // era top: "110%"
     },
     "ca"
+);
 
-);//nomeando este trecho de animação como "ca" para sicronização
-
-tl2.from (
+tl2.from(
     "#cocacola",
     {
-        rotate: "-90deg", // inicia o elemento com classe lemon1 rotacionanndo
-        left: "-100%", // move o elemento fora da tela (-110%) á esquerda
-        top: "110%", // Inicia o elemento ligeiramente abaixo da tela (110%)
-
+        rotate: -90,
+        xPercent: -100,
+        yPercent: 110,
     },
     "ca"
+);
 
-);//nomeando este trecho de animação como "ca" para sicronização
-
-tl2.from (
+tl2.from(
     ".lemon2",
     {
-        rotate: "90deg", // inicia o elemento com classe lemon2 rotacionanndo em 90 graus
-        left: "100%", // move o elemento fora da tela 100% a direita
-        top: "110%",
-        rotate: "830deg", // Inicia o elemento ligeiramente abaixo da tela (110%)
-
+        rotate: "830deg",
+        xPercent: 100,
+        yPercent: 110,
     },
     "ca"
+);
 
-);//nomeando este trecho de animação como "ca" para sicronização
-
-tl2.from (
+tl2.from(
     "#pepsi",
     {
-        rotate: "90deg", // inicia o elemento com classe lemon2 rotacionanndo em 90 graus
-        left: "100%", // move o elemento fora da tela 100% a direita
-        top: "110%", // Inicia o elemento ligeiramente abaixo da tela (110%)
-
+        rotate: 90,
+        xPercent: 100,
+        yPercent: 110,
     },
     "ca"
+);
 
-);//nomeando este trecho de animação como "ca" para sicronização
-
-tl2.to (
+tl2.to(
     "#laranja-cortada",
     {
-        width: "18%", // inicia o elemento com classe lemon2 rotacionanndo em 90 graus
-        left: "42%", // move o elemento fora da tela 100% a direita
-        top: "204%",
-        rotate: "520deg" // Inicia o elemento ligeiramente abaixo da tela (110%)
-
+        width: "18%",
+        xPercent: 100,
+        yPercent:  120,
+        rotate: "520deg",
     },
     "ca"
+);
 
-);//nomeando este trecho de animação como "ca" para sicronização
-
-tl2.to (
+tl2.to(
     "#fanta",
     {
-        width: "35%", // inicia o elemento com classe lemon2 rotacionanndo em 90 graus
-        left: "33%", // move o elemento fora da tela 100% a direita
-        top: "210%",
-        rotate: "360deg" // Inicia o elemento ligeiramente abaixo da tela (110%)
-
+        width: "35%",
+        xPercent: 93,
+        yPercent: 168,
+        rotate: "360deg",
     },
     "ca"
-
-);//nomeando este trecho de animação como "ca" para sicronização
-
-
-
+);
 
 
     
