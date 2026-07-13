@@ -155,11 +155,12 @@ tl2.to(
     {
         width: "35%",
         xPercent: 93,
-        yPercent: 168,
+        yPercent: 163,
         rotate: "360deg",
     },
     "ca"
 );
 
+window.addEventListener("load", () => ScrollTrigger.refresh());
 
     
