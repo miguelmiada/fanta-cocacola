@@ -1,7 +1,7 @@
 //Criação de uma timeline GSAP com animações sicronizadas com o scroll 
 let lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    duration: 0.8, // era 1.2
+    easing: (t) => Math.min(1, 1 - Math.pow(2, -8 * t)), // menos "cauda longa"
 });
 
 function raf(time) {
@@ -143,9 +143,10 @@ tl2.to(
     "#laranja-cortada",
     {
         width: "18%",
-        xPercent: 100,
-        yPercent:  120,
+        left: "42%",
+        top: "204%",
         rotate: "520deg",
+        
     },
     "ca"
 );
@@ -154,13 +155,24 @@ tl2.to(
     "#fanta",
     {
         width: "35%",
-        xPercent: 93,
-        yPercent: 163,
+        left: "33%",
+        top: "210%",
         rotate: "360deg",
+        
     },
     "ca"
 );
 
-window.addEventListener("load", () => ScrollTrigger.refresh());
-
+Promise.all([
+    document.fonts.ready,
+    ...Array.from(document.images).map(img => 
+        img.complete ? Promise.resolve() : new Promise(res => { img.onload = res; img.onerror = res; })
+    )
+]).then(() => {
+    console.log("Refresh disparado!"); // adicione essa linha temporariamente
+    ScrollTrigger.refresh(true);
+    window.addEventListener("resize", () => {
+    ScrollTrigger.refresh(true);
+});
+});
     
